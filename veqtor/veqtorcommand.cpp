@@ -5,20 +5,9 @@
 *
 * Copyright (c) 2016, shannon.mackey@refaqtory.com
 * ***************************************************************************/
-#include <QCoreApplication>
+#include "veqtorcommand.h"
 
-#include "veqtor.h"
-
-int main(int argc, char *argv[])
+VeqtorCommand::VeqtorCommand(QObject *parent) : QObject(parent)
 {
 
-    QCoreApplication::setOrganizationName("refaqtory");
-    QCoreApplication::setOrganizationDomain("refaqtory.com");
-    QCoreApplication::setApplicationName("veqtor");
-    QCoreApplication::setApplicationVersion("0.1");
-
-    QCoreApplication a(argc, argv);
-
-
-    return a.exec();
 }

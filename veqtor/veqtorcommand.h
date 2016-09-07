@@ -5,20 +5,20 @@
 *
 * Copyright (c) 2016, shannon.mackey@refaqtory.com
 * ***************************************************************************/
-#include <QCoreApplication>
+#ifndef VEQTORCOMMAND_H
+#define VEQTORCOMMAND_H
 
-#include "veqtor.h"
+#include <QObject>
 
-int main(int argc, char *argv[])
+class VeqtorCommand : public QObject
 {
+    Q_OBJECT
+public:
+    explicit VeqtorCommand(QObject *parent = 0);
 
-    QCoreApplication::setOrganizationName("refaqtory");
-    QCoreApplication::setOrganizationDomain("refaqtory.com");
-    QCoreApplication::setApplicationName("veqtor");
-    QCoreApplication::setApplicationVersion("0.1");
+signals:
 
-    QCoreApplication a(argc, argv);
+public slots:
+};
 
-
-    return a.exec();
-}
+#endif // VEQTORCOMMAND_H
